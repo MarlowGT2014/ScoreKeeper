@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.android.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Guest"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="32sp"/>
+
+            <TextView
+                android:id="@+id/guestScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="32sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/minusGuest"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/buttonBackground"
+                    android:onClick="minusGuest"
+                    android:text="-"
+                    android:textColor="@color/textColor"/>
+
+                <TextView
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/plusGuest"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/buttonBackground"
+                    android:onClick="plusGuest"
+                    android:text="+"
+                    android:textColor="@color/textColor"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="32sp"/>
+
+            <TextView
+                android:id="@+id/homeScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="32sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/minusHome"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/buttonBackground"
+                    android:onClick="minusHome"
+                    android:text="-"
+                    android:textColor="@color/textColor"/>
+
+                <TextView
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/plusHome"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/buttonBackground"
+                    android:onClick="plusHome"
+                    android:text="+"
+                    android:textColor="@color/textColor"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:text="Inning"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/minusInning"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="minusInning"
+            android:padding="16dp"
+            android:text="-"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/currentInning"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="0"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/plusInning"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="plusInning"
+            android:padding="16dp"
+            android:text="+"
+            android:textColor="@color/textColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:text="Ball"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/minusBall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="minusBall"
+            android:padding="16dp"
+            android:text="-"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/currentBall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="0"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/plusBall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="plusBall"
+            android:padding="16dp"
+            android:text="+"
+            android:textColor="@color/textColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:text="Strike"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/minusStrike"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="minusStrike"
+            android:padding="16dp"
+            android:text="-"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/currentStrike"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="0"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/plusStrike"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="plusStrike"
+            android:padding="16dp"
+            android:text="+"
+            android:textColor="@color/textColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:text="Out"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/minusOut"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="minusOut"
+            android:padding="16dp"
+            android:text="-"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/currentOut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="0"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/plusOut"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/buttonBackground"
+            android:onClick="plusOut"
+            android:padding="16dp"
+            android:text="+"
+            android:textColor="@color/textColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/resetGame"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="@color/buttonBackground"
+            android:onClick="resetGame"
+            android:padding="16dp"
+            android:text="Reset Game"
+            android:textColor="@color/textColor"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
